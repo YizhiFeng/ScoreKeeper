@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--ObjC View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ScoreKeeper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ObjCViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,7 +36,7 @@
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="New Game"/>
                                                 <connections>
-                                                    <action selector="pressedNewGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ipr-jI-ZsA"/>
+                                                    <action selector="pressedNewGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NlN-lB-M6k"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JlN-kz-g3X">
@@ -44,7 +44,7 @@
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Enter Round"/>
                                                 <connections>
-                                                    <action selector="pressedEnterRound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k0C-cm-Va8"/>
+                                                    <action selector="pressedEnterRound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aJj-ar-mMO"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -117,19 +117,19 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="score" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ojo-3N-pcA" userLabel="player2ScoreTextField">
+                                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="score" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ojo-3N-pcA" userLabel="player2ScoreTextField">
                                                 <rect key="frame" x="103" y="0.0" width="95" height="20"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="score" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="is4-Bp-GUo" userLabel="player3ScoreTextField">
+                                            <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="score" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="is4-Bp-GUo" userLabel="player3ScoreTextField">
                                                 <rect key="frame" x="206" y="0.0" width="95" height="20"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="score" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tq3-LJ-yMI" userLabel="player4ScoreTextField">
+                                            <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="score" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tq3-LJ-yMI" userLabel="player4ScoreTextField">
                                                 <rect key="frame" x="309" y="0.0" width="95" height="20"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -158,19 +158,19 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IzA-3q-NhH" userLabel="player2ScoresTextView">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IzA-3q-NhH" userLabel="player2ScoresTextView">
                                                 <rect key="frame" x="103" y="0.0" width="95" height="547.33333333333337"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WbK-8b-mta" userLabel="player3ScoresTextView">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WbK-8b-mta" userLabel="player3ScoresTextView">
                                                 <rect key="frame" x="206" y="0.0" width="95" height="547.33333333333337"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RhZ-Hq-d2A" userLabel="player4ScoresTextView">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="3" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RhZ-Hq-d2A" userLabel="player4ScoresTextView">
                                                 <rect key="frame" x="309" y="0.0" width="95" height="547.33333333333337"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -211,15 +211,17 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="player1ScoreTextField" destination="xH3-jC-ygy" id="DVc-JQ-57n"/>
-                        <outlet property="player1ScoresTextView" destination="gZy-GE-Skq" id="4kD-Sd-7G7"/>
-                        <outlet property="player2ScoreTextField" destination="Ojo-3N-pcA" id="6yN-se-kYH"/>
-                        <outlet property="player2ScoresTextView" destination="IzA-3q-NhH" id="Xx6-74-wyC"/>
-                        <outlet property="player3ScoreTextField" destination="is4-Bp-GUo" id="4UB-AM-w5A"/>
-                        <outlet property="player3ScoresTextView" destination="WbK-8b-mta" id="qOs-Xm-xXZ"/>
-                        <outlet property="player4ScoreTextField" destination="Tq3-LJ-yMI" id="gWp-Gp-9zY"/>
-                        <outlet property="player4ScoresTextView" destination="RhZ-Hq-d2A" id="JLM-Ns-AJx"/>
-                        <outlet property="roundLabel" destination="NkE-yE-vtE" id="1Zi-Ck-rJC"/>
+                        <outlet property="enterRoundBtn" destination="JlN-kz-g3X" id="e20-yO-XaK"/>
+                        <outlet property="p1ScoreTextField" destination="xH3-jC-ygy" id="QaG-JV-mqm"/>
+                        <outlet property="p1SocresTextView" destination="gZy-GE-Skq" id="9wD-4m-SO8"/>
+                        <outlet property="p2ScoreTextField" destination="Ojo-3N-pcA" id="7tS-gt-rzn"/>
+                        <outlet property="p2SocresTextView" destination="IzA-3q-NhH" id="anu-0K-X7w"/>
+                        <outlet property="p3ScoreTextField" destination="is4-Bp-GUo" id="wXC-9u-6Hg"/>
+                        <outlet property="p3SocresTextView" destination="WbK-8b-mta" id="xOU-nn-TFL"/>
+                        <outlet property="p4ScoreTextField" destination="Tq3-LJ-yMI" id="lnT-5M-iGF"/>
+                        <outlet property="p4SocresTextView" destination="RhZ-Hq-d2A" id="3SU-5f-SPb"/>
+                        <outlet property="roundLabel" destination="NkE-yE-vtE" id="eQc-9R-Rby"/>
+                        <outlet property="theNewGameBtn" destination="qnx-RK-qoV" id="A8c-5D-QpJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
